@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>Midlife Aggro Legal</title>
+    <style>
+      :root {
+        --bg: #f7f5f0;
+        --paper: #ffffff;
+        --ink: #1c1e21;
+        --ink-soft: #454a52;
+        --ink-faint: #6b7280;
+        --line: #e3ded3;
+        --accent: #9a3412;
+        --accent-ink: #7c2d12;
+        --accent-soft: #fdf0e9;
+        --chip: #efece4;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #141518;
+          --paper: #1d1f23;
+          --ink: #eceef1;
+          --ink-soft: #c3c8cf;
+          --ink-faint: #969da8;
+          --line: #2e3138;
+          --accent: #f0a073;
+          --accent-ink: #f6b48d;
+          --accent-soft: #2b211c;
+          --chip: #26292f;
+        }
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-size: 17px;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      a { color: var(--accent-ink); text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent); text-underline-offset: 3px; }
+      a:hover { text-decoration-color: var(--accent); }
+
+      .wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 40px 20px 72px;
+      }
+
+      header.intro {
+        margin-bottom: 28px;
+      }
+      .kicker {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent-ink);
+        background: var(--accent-soft);
+        border: 1px solid var(--line);
+        padding: 5px 10px;
+        border-radius: 999px;
+        margin-bottom: 16px;
+      }
+      h1 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(32px, 6vw, 44px);
+        line-height: 1.12;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        margin: 0 0 12px;
+      }
+      .lede {
+        font-size: 18px;
+        line-height: 1.6;
+        color: var(--ink-soft);
+        margin: 0 0 10px;
+        max-width: 62ch;
+      }
+      .meta {
+        font-size: 14px;
+        color: var(--ink-faint);
+        margin: 0;
+      }
+      .meta strong { color: var(--ink-soft); font-weight: 600; }
+
+      nav.jump {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 24px 0 8px;
+      }
+      nav.jump a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        color: var(--ink);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 15px;
+        padding: 10px 16px;
+        border-radius: 10px;
+      }
+      nav.jump a span {
+        color: var(--accent-ink);
+        font-weight: 700;
+      }
+      nav.jump a:hover { border-color: var(--accent); }
+
+      section.doc {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 32px 28px 10px;
+        margin-top: 24px;
+        scroll-margin-top: 20px;
+      }
+      section.doc > h2 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 28px;
+        line-height: 1.2;
+        margin: 0 0 6px;
+      }
+      section.doc > .updated {
+        font-size: 14px;
+        color: var(--ink-faint);
+        margin: 0 0 22px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--line);
+      }
+      h3 {
+        font-size: 17px;
+        font-weight: 700;
+        margin: 26px 0 6px;
+        letter-spacing: -0.005em;
+      }
+      h3:first-of-type { margin-top: 4px; }
+      p { margin: 0 0 14px; color: var(--ink-soft); }
+      p strong, li strong { color: var(--ink); }
+      ul {
+        margin: 0 0 16px;
+        padding-left: 22px;
+        color: var(--ink-soft);
+      }
+      li { margin-bottom: 7px; }
+      li:last-child { margin-bottom: 0; }
+
+      .contact-box {
+        background: var(--chip);
+        border-radius: 10px;
+        padding: 16px 18px;
+        margin: 6px 0 22px;
+      }
+      .contact-box p { margin: 0; }
+      .contact-box a { font-weight: 600; word-break: break-all; }
+
+      footer {
+        margin-top: 28px;
+        text-align: center;
+        font-size: 14px;
+        color: var(--ink-faint);
+      }
+      footer a { color: var(--ink-faint); }
+      footer .sep { margin: 0 8px; opacity: 0.6; }
+
+      @media (max-width: 560px) {
+        .wrap { padding: 28px 14px 56px; }
+        section.doc { padding: 24px 18px 4px; border-radius: 12px; }
+        body { font-size: 16px; }
+        .lede { font-size: 17px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="intro">
+        <span class="kicker">Midlife Aggro</span>
+        <h1>Legal information for the Tiktok poster app</h1>
+        <p class="lede">This page holds the Terms of Service and Privacy Policy for <strong>Tiktok poster</strong>, an app that uploads short World of Warcraft: Forever videos to the Midlife Aggro TikTok account.</p>
+        <p class="meta"><strong>App:</strong> Tiktok poster &nbsp;·&nbsp; <strong>Account:</strong> Midlife Aggro on TikTok &nbsp;·&nbsp; <strong>Last updated:</strong> November 7, 2026</p>
+        <nav class="jump" aria-label="Jump to a section">
+          <a href="#terms"><span>§1</span> Terms of Service</a>
+          <a href="#privacy"><span>§2</span> Privacy Policy</a>
+        </nav>
+      </header>
+
+      <section class="doc" id="terms">
+        <h2>Terms of Service</h2>
+        <p class="updated">For the Tiktok poster app. Last updated November 7, 2026.</p>
+
+        <h3>1. What this app does</h3>
+        <p>Tiktok poster uploads short World of Warcraft: Forever videos to the Midlife Aggro TikTok account using TikTok's Content Posting API. Videos cover gaming tips, secret pet locations, class debates, and gameplay moments. The app can post a video directly, or save it as a draft in TikTok for the creator to review, edit, and post by hand.</p>
+
+        <h3>2. Authorization</h3>
+        <p>The app only acts on the Midlife Aggro TikTok account, and only with that account owner's authorization. It does not post, upload, or change anything on any other account. The account owner can revoke the app's access at any time in TikTok's settings, and revoking access stops the app from uploading.</p>
+
+        <h3>3. The content</h3>
+        <p>The account owner is responsible for the videos uploaded with this app, including making sure they have the right to use the footage, music, and any other material in them. Videos should follow TikTok's Community Guidelines and Terms of Service.</p>
+
+        <h3>4. Acceptable use</h3>
+        <ul>
+          <li>Use the app only for the authorized Midlife Aggro account.</li>
+          <li>Do not use the app to post spam, misleading content, or content that breaks TikTok's rules.</li>
+          <li>Do not try to use the app to access an account you do not own or have permission to use.</li>
+        </ul>
+
+        <h3>5. TikTok's terms also apply</h3>
+        <p>Anything posted through this app is also covered by TikTok's own Terms of Service and Community Guidelines. If TikTok removes a video or restricts the account, that decision is TikTok's.</p>
+
+        <h3>6. Availability and changes</h3>
+        <p>The app is provided as is, with no promise that it will always be available or error free. How it works may change if TikTok changes its Content Posting API or its rules for developer apps. These terms may be updated from time to time, and the date at the top of this section will show when they last changed.</p>
+
+        <h3>7. Contact</h3>
+        <div class="contact-box">
+          <p>Questions about these terms: <a href="mailto:fstuartcreativity@gmail.com">fstuartcreativity@gmail.com</a></p>
+        </div>
+      </section>
+
+      <section class="doc" id="privacy">
+        <h2>Privacy Policy</h2>
+        <p class="updated">For the Tiktok poster app. Last updated November 7, 2026.</p>
+
+        <h3>1. What the app accesses</h3>
+        <p>To upload videos, the app uses TikTok's Content Posting API with the account owner's authorization. That gives it:</p>
+        <ul>
+          <li><strong>Basic profile information</strong> from the authorized TikTok account, so it can confirm it is uploading to the right account.</li>
+          <li><strong>An access token</strong> from TikTok, which is the permission key that lets the app upload on that account's behalf.</li>
+          <li><strong>The video files and captions</strong> chosen for upload to the Midlife Aggro account.</li>
+        </ul>
+        <p>The app does not collect information from viewers, followers, or anyone else who watches the videos.</p>
+
+        <h3>2. How that information is used</h3>
+        <p>It is used for one job only: uploading the chosen videos to the authorized Midlife Aggro TikTok account, either as a post or as a draft for the creator to review first. The app does not sell personal information, and it does not use it for advertising.</p>
+
+        <h3>3. What is shared</h3>
+        <p>Video files, captions, and the access token are sent to TikTok through its Content Posting API so the upload can happen. That is the only sharing the app does to do its job. TikTok handles the posted content under TikTok's own Privacy Policy.</p>
+
+        <h3>4. Storage and retention</h3>
+        <p>Access tokens are kept only so the app can keep uploading for the authorized account, and they can be removed by revoking the app's access. The app does not build a separate database of TikTok user information.</p>
+
+        <h3>5. Revoking access</h3>
+        <p>The account owner can cut off the app at any time from inside TikTok, under the account's settings for authorized apps and services. Once access is revoked, the app can no longer upload or act on the account.</p>
+
+        <h3>6. Security</h3>
+        <p>Reasonable steps are taken to protect the access token and the video files while they are handled by the app. No system is perfectly secure, so no absolute guarantee can be made.</p>
+
+        <h3>7. Changes to this policy</h3>
+        <p>This policy may be updated from time to time. The date at the top of this section will show when it last changed.</p>
+
+        <h3>8. Contact</h3>
+        <div class="contact-box">
+          <p>Questions about this policy: <a href="mailto:fstuartcreativity@gmail.com">fstuartcreativity@gmail.com</a></p>
+        </div>
+      </section>
+
+      <footer>
+        <a href="#terms">Terms of Service</a><span class="sep">·</span><a href="#privacy">Privacy Policy</a><span class="sep">·</span><a href="mailto:fstuartcreativity@gmail.com">fstuartcreativity@gmail.com</a>
+      </footer>
+    </div>
+  </body>
+</html>
